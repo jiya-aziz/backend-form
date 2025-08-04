@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #e9b577, #e77072, #ff69b4, #93eb93); /* Vibrant gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite; /* Animation effect */
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.9); /* Slight transparency for the form */
+      padding: 25px 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      color: #333;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 12px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #af4884;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(255, 140, 0, 0.5);
+    }
+
+    button {
+      background: #ff8c00;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff3b3f;
+    }
+
+    button:active {
+      background: #ff69b4;
+    }
+  </style>
+</head>
+<body>
+  <form action="/submit" method="POST">
+    <h2>Contact Us</h2>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>
+
